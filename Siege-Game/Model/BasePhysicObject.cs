@@ -38,7 +38,7 @@ public abstract class BasePhysicObject(Vector2 position, Texture2D texture) : Ba
             return 0.025f;
         if(value > 0.1)
             return 0.01f;
-        return 0f;
+        return value;
 
     }
     

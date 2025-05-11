@@ -64,3 +64,4 @@ C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\obj\Debug\net8.0\S
 C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\obj\Debug\net8.0\ref\Siege-Game.dll
 C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\VDHaKq.xnb
 C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\Catapult.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\mytext1.xnb

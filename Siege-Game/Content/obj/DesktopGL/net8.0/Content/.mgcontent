@@ -5,9 +5,11 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/Catapult.png</File>
+    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/mytext1.spritefont</File>
     <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/VDHaKq.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
