@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -20,6 +21,8 @@ public class Game1 : Game
     private UiDrawer uiDrawer;
     private King king;
     private Castle castle;
+    private int score = 0;
+    
 
     public Game1()
     {
@@ -33,18 +36,22 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
+        
         // TODO: Add your initialization logic here
-        catapult = new Catapult(new Vector2(20, 536), Content.Load<Texture2D>("idle_withoutrock"),
+        catapult = new Catapult(new Vector2(20, 522), Content.Load<Texture2D>("idle_withoutrock"),
             Content.Load<Texture2D>("fire"), Content.Load<Texture2D>("reload"),
             Content.Load<Texture2D>("idle_withrock"));
         catapult.fired += OnFired;
         inputManager = new InputManager(catapult);
         uiDrawer = new UiDrawer(catapult, Content.Load<SpriteFont>("mytext1"));
         
-        king = new King(new Vector2(300, 472), Content.Load<Texture2D>("king"));
-        var tower1 = new Tower(new Vector2(300, 472), Content.Load<Texture2D>("tower1"), 64, 128, new Vector2(0,0));
-        var tower3 = new Tower(new Vector2(450, 536), Content.Load<Texture2D>("castle"), 64, 64, new Vector2(0,0));
-        var tower2 = new Tower(new Vector2(600, 408), Content.Load<Texture2D>("tower2"), 64, 192, new Vector2(0,0));
+        king = new King(new Vector2(300, 440), Content.Load<Texture2D>("king"));
+        var tower1 = new Tower(new Vector2(300, 460), Content.Load<Texture2D>("tower1"), 64, 128, new Vector2(24,-5));
+        var tower3 = new Tower(new Vector2(450, 518), Content.Load<Texture2D>("castle"), 64, 64, new Vector2(24,-10));
+        var tower2 = new Tower(new Vector2(600, 390), Content.Load<Texture2D>("tower2"), 64, 192, new Vector2(24,-5));
+        tower1.kingIsHitted += KingUnderAttack;
+        tower2.kingIsHitted += KingUnderAttack;
+        tower3.kingIsHitted += KingUnderAttack;
         castle = new Castle(tower1,tower3,tower2, king);
         
         towers = new List<Tower>
@@ -63,13 +70,25 @@ public class Game1 : Game
             tower1,
             tower3,
             tower2,
-            king
+            king,
         };
+        
+    }
+
+    private void KingUnderAttack()
+    {
+        score++;
+        if (score >= 3)
+        {
+            Console.WriteLine("The King is dead");
+            objects.Remove(king);
+        }
+
     }
 
     private void OnFired()
     {
-        var rock = new Rock(new Vector2(30, 526), Content.Load<Texture2D>("rock"));
+        var rock = new Rock(new Vector2(30, 518), Content.Load<Texture2D>("rock"));
         rock.AddForce(catapult.GetFinalRockVector());
         rock.deleted += RockOnDeleted;
         objects.Add(rock);
@@ -94,6 +113,7 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
             Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+        
 
         // TODO: Add your update logic here
 
@@ -107,6 +127,10 @@ public class Game1 : Game
             var rock = rocks[i];
             rock.CheckTowers(towers);
         }
+        
+     
+        
+        castle.Update(gameTime);
 
         inputManager.Update();
         base.Update(gameTime);
@@ -115,17 +139,27 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
+        
         // трисовка спрайта
         spriteBatch.Begin();
+        var bob = Content.Load<Texture2D>("test fon");
+        spriteBatch.Draw(bob, new Vector2(0, 0), Color.White);
         foreach (var baseObject in objects)
         {
             baseObject.Draw(gameTime, spriteBatch);
         }
 
         uiDrawer.Draw(spriteBatch);
+       
+        var ground = Content.Load<Texture2D>("ground tile");
+        spriteBatch.Draw(ground, new Vector2(0,568), Color.White);
+        for (int i = 0; i < 8; i++)
+        {
+            spriteBatch.Draw(ground, new Vector2(i*128,568), Color.White);
+        }
+        
         spriteBatch.End();
-
         base.Draw(gameTime);
+        
     }
 }

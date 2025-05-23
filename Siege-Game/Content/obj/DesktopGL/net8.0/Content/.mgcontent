@@ -4,24 +4,24 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/angle.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/castle.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/Catapult.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/fire.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/ground tile.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/idle_withoutrock.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/idle_withrock.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/king.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/mytext1.spritefont</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/power.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/reload.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/rock.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/slider.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/test fon.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/tower1.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/tower2.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/VDHaKq.png</File>
-    <File>C:/Users/Saw4uk/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/warrior.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/angle.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/castle.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/Catapult.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/fire.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/ground tile.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/idle_withoutrock.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/idle_withrock.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/king.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/mytext1.spritefont</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/power.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/reload.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/rock.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/slider.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/test fon.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/tower1.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/tower2.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/VDHaKq.png</File>
+    <File>C:/Users/Bobby/Documents/GitHub/Csharp-Siege-Game/Siege-Game/Content/warrior.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

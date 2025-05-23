@@ -14,7 +14,7 @@ public class King(Vector2 position, Texture2D texture) : BaseObject(position, te
     {
         
     }
-
+    
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(texture, position, Color.White);

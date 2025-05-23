@@ -9,7 +9,7 @@ public class Tower(Vector2 position, Texture2D texture, int xSize, int ySize, Ve
     private int xSize = xSize;
     private int ySize = ySize;
     private bool isKingOnTower;
-    private Vector2 kingPos;
+    private Vector2 kingPos = kingPos;
     
     public bool IsKingOnTower
     {
@@ -21,16 +21,18 @@ public class Tower(Vector2 position, Texture2D texture, int xSize, int ySize, Ve
 
     public Rectangle SourceRectangle => sourceRectangle;
 
-    public event Action win;
+    public event Action kingIsHitted;
+    
     
     public void CheckHit()
     {
         if(IsKingOnTower)
-            win?.Invoke();
+            kingIsHitted?.Invoke();
     }
 
     public Vector2 GetFullKingPos()
     {
+        var result = kingPos+position;
         return kingPos + position;
     }
     

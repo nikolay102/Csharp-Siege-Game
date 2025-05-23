@@ -11,7 +11,7 @@ public class Catapult : BaseObject
     private CatapultDrawer catapultDrawer;
     
     private float angle = 10f;
-    private float power = 1f;
+    private float power = 5f;
     
     private float angleMax = 80f;
     private float angleMin = 10f;
