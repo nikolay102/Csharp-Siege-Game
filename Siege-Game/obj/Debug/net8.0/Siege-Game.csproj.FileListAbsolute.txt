@@ -65,3 +65,18 @@ C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\obj\Debug\net8.0\r
 C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\VDHaKq.xnb
 C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\Catapult.xnb
 C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\mytext1.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\angle.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\castle.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\fire.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\ground tile.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\king.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\power.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\reload.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\rock.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\slider.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\test fon.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\tower1.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\tower2.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\warrior.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\idle_withoutrock.xnb
+C:\Users\Saw4uk\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\idle_withrock.xnb

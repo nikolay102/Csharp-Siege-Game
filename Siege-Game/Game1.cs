@@ -17,8 +17,8 @@ public class Game1 : Game
     private List<BaseObject> objects;
     private InputManager inputManager;
     private UiDrawer uiDrawer;
-    
-    
+
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -29,24 +29,38 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        catapult = new Catapult(new Vector2(20,400), Content.Load<Texture2D>("Catapult"));
+        catapult = new Catapult(new Vector2(20, 400), Content.Load<Texture2D>("idle_withoutrock"),
+            Content.Load<Texture2D>("fire"), Content.Load<Texture2D>("reload"),
+            Content.Load<Texture2D>("idle_withrock"));
+        catapult.fired += OnFired;
         inputManager = new InputManager(catapult);
         uiDrawer = new UiDrawer(catapult, Content.Load<SpriteFont>("mytext1"));
-        var rock = new Rock(new Vector2(20,300), Content.Load<Texture2D>("Catapult"));
-        rock.AddForce(new Vector2(5f, 0f));
         
+
         base.Initialize();
         objects = new List<BaseObject>()
         {
-            catapult,
-            rock
+            catapult
         };
     }
 
+    private void OnFired()
+    {
+        var rock = new Rock(new Vector2(30, 390), Content.Load<Texture2D>("rock"));
+        rock.AddForce(catapult.GetFinalRockVector());
+        rock.deleted += RockOnDeleted;
+        objects.Add(rock);
+    }
+
+    private void RockOnDeleted(Rock rock)
+    {
+        objects.Remove(rock);
+    }
+    
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-        
+
         // TODO: use this.Content to load your game content here
     }
 
@@ -57,11 +71,12 @@ public class Game1 : Game
             Exit();
 
         // TODO: Add your update logic here
-        
+
         foreach (var baseObject in objects)
         {
             baseObject.Update(gameTime);
         }
+
         inputManager.Update();
         base.Update(gameTime);
     }
@@ -69,17 +84,17 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-        
+
         // трисовка спрайта
         spriteBatch.Begin();
         foreach (var baseObject in objects)
         {
             baseObject.Draw(gameTime, spriteBatch);
         }
+
         uiDrawer.Draw(spriteBatch);
         spriteBatch.End();
 
         base.Draw(gameTime);
     }
-    
 }

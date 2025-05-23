@@ -2,22 +2,32 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Siege_Game.View;
 
 namespace Siege_Game.Model;
 
-public class Catapult(Vector2 position, Texture2D texture) : BaseObject(position, texture)
+public class Catapult : BaseObject
 {
+    private CatapultDrawer catapultDrawer;
+    
     private float angle = 10f;
     private float power = 1f;
 
+    
+    
     private float angleMax = 80f;
     private float angleMin = 10f;
     
     private float powerMax = 10f;
     private float powerMin = 1f;
-    
+
+    private bool isReload;
+
+    public bool IsReload => isReload;
+
     public event Action angleChanged;
     public event Action powerChanged;
+    public event Action fired; 
 
     public float Angle
     {
@@ -39,6 +49,11 @@ public class Catapult(Vector2 position, Texture2D texture) : BaseObject(position
         }
     }
 
+    public Catapult(Vector2 position, Texture2D idleTexture, Texture2D fireTexture, Texture2D reloadTexture, Texture2D reloadedTexture) : base(position, idleTexture)
+    {
+        catapultDrawer = new CatapultDrawer(reloadTexture, fireTexture, reloadedTexture, 64,this);
+    }
+
     public override void Update(GameTime gameTime)
     {
         
@@ -46,12 +61,7 @@ public class Catapult(Vector2 position, Texture2D texture) : BaseObject(position
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(texture, position, Color.White);
-    }
-
-    public void ThrowRock()
-    {
-        
+        catapultDrawer.Update(gameTime,spriteBatch);
     }
 
     public void ChangeAngle(float difference)
@@ -64,5 +74,28 @@ public class Catapult(Vector2 position, Texture2D texture) : BaseObject(position
     {
         power += difference;
         power = MathHelper.Clamp(power, powerMin, powerMax);
+    }
+    
+    public void Reload()
+    {
+        if(isReload) return;
+        isReload = true;
+        catapultDrawer.DrawReload();
+    }
+    
+    public void ThrowRock()
+    {
+        if (!isReload) return;
+        isReload = false;
+        catapultDrawer.DrawFire();
+        fired?.Invoke();
+    }
+
+    public Vector2 GetFinalRockVector()
+    {
+        var angleInRads = -angle * MathHelper.Pi / 180f;
+        var angleVector = new Vector2((float)Math.Cos(angleInRads), (float)Math.Sin(angleInRads));
+        var result = angleVector * power;
+        return result;
     }
 }

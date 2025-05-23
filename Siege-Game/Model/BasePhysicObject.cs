@@ -8,9 +8,9 @@ public abstract class BasePhysicObject(Vector2 position, Texture2D texture) : Ba
 {
     protected float g = 0.5f;
     protected Vector2 force;
-    protected float Xmax = 400;
+    protected float Xmax = 700;
     protected float Xmin = 0;
-    protected float Ymax = 400;
+    protected float Ymax = 450;
     protected float Ymin = 0;
 
     public void AddForce(Vector2 force)
@@ -26,6 +26,7 @@ public abstract class BasePhysicObject(Vector2 position, Texture2D texture) : Ba
         force.X -= CalculateSopr(force.X);
         Console.WriteLine(force.X);
         position.Y += g;
+        force.Y += g/5;
     }
 
     private float CalculateSopr(float value)
@@ -39,7 +40,6 @@ public abstract class BasePhysicObject(Vector2 position, Texture2D texture) : Ba
         if(value > 0.1)
             return 0.01f;
         return value;
-
     }
     
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
