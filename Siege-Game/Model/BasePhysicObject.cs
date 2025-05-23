@@ -8,9 +8,9 @@ public abstract class BasePhysicObject(Vector2 position, Texture2D texture) : Ba
 {
     protected float g = 0.5f;
     protected Vector2 force;
-    protected float Xmax = 700;
+    protected float Xmax = 800;
     protected float Xmin = 0;
-    protected float Ymax = 450;
+    protected float Ymax = 584;
     protected float Ymin = 0;
 
     public void AddForce(Vector2 force)
