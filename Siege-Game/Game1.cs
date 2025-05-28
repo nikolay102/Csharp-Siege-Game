@@ -142,8 +142,8 @@ public class Game1 : Game
         
         // трисовка спрайта
         spriteBatch.Begin();
-        var bob = Content.Load<Texture2D>("test fon");
-        spriteBatch.Draw(bob, new Vector2(0, 0), Color.White);
+        var background = Content.Load<Texture2D>("test fon");
+        spriteBatch.Draw(background, new Vector2(0, 0), Color.White);
         foreach (var baseObject in objects)
         {
             baseObject.Draw(gameTime, spriteBatch);
@@ -157,7 +157,12 @@ public class Game1 : Game
         {
             spriteBatch.Draw(ground, new Vector2(i*128,568), Color.White);
         }
-        
+        var power = Content.Load<Texture2D>("power");
+        var angle = Content.Load<Texture2D>("angle");
+        spriteBatch.Draw(power, new Vector2(25,580), Color.White);
+        spriteBatch.Draw(angle, new Vector2(5,515), Color.White);
+        var powerSlider = Content.Load<Texture2D>("slider");
+        var angleSlider = Content.Load<Texture2D>("slider");
         spriteBatch.End();
         base.Draw(gameTime);
         
