@@ -21,7 +21,6 @@ public class Game1 : Game
     private UiDrawer uiDrawer;
     private King king;
     private Castle castle;
-    private int score = 0;
     
 
     public Game1()
@@ -43,9 +42,8 @@ public class Game1 : Game
             Content.Load<Texture2D>("idle_withrock"));
         catapult.fired += OnFired;
         inputManager = new InputManager(catapult);
-        uiDrawer = new UiDrawer(catapult, Content.Load<SpriteFont>("mytext1"));
-        
-        king = new King(new Vector2(300, 440), Content.Load<Texture2D>("king"));
+        king = new King(new Vector2(300, 440), Content.Load<Texture2D>("king"),3);
+        uiDrawer = new UiDrawer(catapult, king, Content.Load<SpriteFont>("mytext1"), Content);
         var tower1 = new Tower(new Vector2(300, 460), Content.Load<Texture2D>("tower1"), 64, 128, new Vector2(24,-5));
         var tower3 = new Tower(new Vector2(450, 518), Content.Load<Texture2D>("castle"), 64, 64, new Vector2(24,-10));
         var tower2 = new Tower(new Vector2(600, 390), Content.Load<Texture2D>("tower2"), 64, 192, new Vector2(24,-5));
@@ -77,13 +75,12 @@ public class Game1 : Game
 
     private void KingUnderAttack()
     {
-        score++;
-        if (score >= 3)
+        king.Damage(1);
+        castle.ChooseRandomTower();
+        if (king.Hp <= 0)
         {
-            Console.WriteLine("The King is dead");
             objects.Remove(king);
         }
-
     }
 
     private void OnFired()
@@ -128,10 +125,7 @@ public class Game1 : Game
             rock.CheckTowers(towers);
         }
         
-     
-        
         castle.Update(gameTime);
-
         inputManager.Update();
         base.Update(gameTime);
     }
@@ -149,7 +143,7 @@ public class Game1 : Game
             baseObject.Draw(gameTime, spriteBatch);
         }
 
-        uiDrawer.Draw(spriteBatch);
+        
        
         var ground = Content.Load<Texture2D>("ground tile");
         spriteBatch.Draw(ground, new Vector2(0,568), Color.White);
@@ -157,12 +151,7 @@ public class Game1 : Game
         {
             spriteBatch.Draw(ground, new Vector2(i*128,568), Color.White);
         }
-        var power = Content.Load<Texture2D>("power");
-        var angle = Content.Load<Texture2D>("angle");
-        spriteBatch.Draw(power, new Vector2(25,580), Color.White);
-        spriteBatch.Draw(angle, new Vector2(5,515), Color.White);
-        var powerSlider = Content.Load<Texture2D>("slider");
-        var angleSlider = Content.Load<Texture2D>("slider");
+        uiDrawer.Draw(spriteBatch);
         spriteBatch.End();
         base.Draw(gameTime);
         

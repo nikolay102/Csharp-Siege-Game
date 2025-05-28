@@ -57,4 +57,17 @@ public class Castle
         king.SetPos(currentTower.GetFullKingPos());
     }
     
+    public void ChooseRandomTower()
+    {
+        var radom = new Random();
+        var rnd = radom.Next(0,3);
+        if(rnd == 0)
+            ChooseTower(currentTower != tower1 ? tower1 : tower2);
+        else if(rnd == 1)
+            ChooseTower(currentTower != tower2 ? tower2 : tower3);
+        else if(rnd == 2)
+            ChooseTower(currentTower != tower3 ? tower3 : tower1);
+        timer = 0f;
+    }
+    
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Siege-Game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c64711a5e10f4f6d2c45e22d36df55d08ab64d4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e71d302743668960dd5f3ab37c8c49827c04a4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Siege-Game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Siege-Game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

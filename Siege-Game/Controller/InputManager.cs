@@ -18,13 +18,13 @@ public class InputManager
     {
         var keyboardState = Keyboard.GetState();
         
-        if (keyboardState.IsKeyDown(Keys.Up))
-            catapult.ChangePower(powerDelta);
-        if (keyboardState.IsKeyDown(Keys.Down))
-            catapult.ChangePower(-powerDelta);
-        if (keyboardState.IsKeyDown(Keys.Left))
-            catapult.ChangeAngle(angleDelta);
         if (keyboardState.IsKeyDown(Keys.Right))
+            catapult.ChangePower(powerDelta);
+        if (keyboardState.IsKeyDown(Keys.Left))
+            catapult.ChangePower(-powerDelta);
+        if (keyboardState.IsKeyDown(Keys.Up))
+            catapult.ChangeAngle(angleDelta);
+        if (keyboardState.IsKeyDown(Keys.Down))
             catapult.ChangeAngle(-angleDelta);
         if (keyboardState.IsKeyDown(Keys.Space))
             catapult.ThrowRock();

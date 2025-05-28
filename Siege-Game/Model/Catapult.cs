@@ -19,6 +19,8 @@ public class Catapult : BaseObject
     private float powerMax = 10f;
     private float powerMin = 1f;
 
+    private int rocksAmount = 10;
+    
     private bool isReload;
 
     public bool IsReload => isReload;
@@ -36,6 +38,8 @@ public class Catapult : BaseObject
             angleChanged?.Invoke();
         }
     }
+    
+    public float AnglePercent => angle / angleMax;
 
     public float Power
     {
@@ -46,6 +50,9 @@ public class Catapult : BaseObject
             powerChanged?.Invoke();
         }
     }
+
+    public int RocksAmount => rocksAmount;
+    public float PowerPercent => power / powerMax;
 
     public Catapult(Vector2 position, Texture2D idleTexture, Texture2D fireTexture, Texture2D reloadTexture, Texture2D reloadedTexture) : base(position, idleTexture)
     {
@@ -84,9 +91,13 @@ public class Catapult : BaseObject
     public void ThrowRock()
     {
         if (!isReload) return;
-        isReload = false;
-        catapultDrawer.DrawFire();
-        fired?.Invoke();
+        if (rocksAmount > 0)
+        {
+            isReload = false;
+            catapultDrawer.DrawFire();
+            rocksAmount--;
+            fired?.Invoke();
+        }
     }
 
     public Vector2 GetFinalRockVector()
