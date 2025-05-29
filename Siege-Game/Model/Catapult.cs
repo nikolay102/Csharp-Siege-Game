@@ -83,9 +83,12 @@ public class Catapult : BaseObject
     
     public void Reload()
     {
-        if(isReload) return;
-        isReload = true;
-        catapultDrawer.DrawReload();
+        if (rocksAmount > 0)
+        {
+            if (isReload) return;
+            isReload = true;
+            catapultDrawer.DrawReload();
+        }
     }
     
     public void ThrowRock()

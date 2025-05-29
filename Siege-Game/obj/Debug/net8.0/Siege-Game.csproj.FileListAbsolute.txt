@@ -98,3 +98,9 @@ C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Co
 C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\tower2.xnb
 C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\VDHaKq.xnb
 C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\warrior.xnb
+C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\Rbutton.xnb
+C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\RightLeft.xnb
+C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\SpaceButton.xnb
+C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\TopDown.xnb
+C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\File.xnb
+C:\Users\Bobby\Documents\GitHub\Csharp-Siege-Game\Siege-Game\bin\Debug\net8.0\Content\File2.xnb
