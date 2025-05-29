@@ -54,7 +54,7 @@ public class Castle
         currentTower.IsKingOnTower = false;
         currentTower = tower;
         currentTower.IsKingOnTower = true;
-        king.SetPos(currentTower.GetFullKingPos());
+        king.SetPos(currentTower.FullKingPos);
     }
     
     public void ChooseRandomTower()

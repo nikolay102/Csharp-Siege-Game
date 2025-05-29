@@ -30,12 +30,8 @@ public class Tower(Vector2 position, Texture2D texture, int xSize, int ySize, Ve
             kingIsHitted?.Invoke();
     }
 
-    public Vector2 GetFullKingPos()
-    {
-        var result = kingPos+position;
-        return kingPos + position;
-    }
-    
+    public Vector2 FullKingPos => kingPos + position;
+
     public override void Update(GameTime gameTime)
     {
         

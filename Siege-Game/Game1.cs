@@ -41,7 +41,7 @@ public class Game1 : Game
             Content.Load<Texture2D>("idle_withrock"));
         catapult.fired += OnFired;
         inputManager = new InputManager(catapult);
-        king = new King(new Vector2(300, 440), Content.Load<Texture2D>("king"),1);
+        king = new King(new Vector2(300, 440), Content.Load<Texture2D>("king"),3);
         uiDrawer = new UiDrawer(catapult, king, Content.Load<SpriteFont>("File"),Content.Load<SpriteFont>("File2"), Content);
         var tower1 = new Tower(new Vector2(300, 460), Content.Load<Texture2D>("tower1"), 64, 128, new Vector2(24,-5));
         var tower3 = new Tower(new Vector2(450, 518), Content.Load<Texture2D>("castle"), 64, 64, new Vector2(24,-10));
